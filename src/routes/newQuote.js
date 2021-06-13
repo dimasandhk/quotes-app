@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 
 // Mongoose Models
 const Quote = require("../models/Quote");

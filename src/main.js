@@ -9,6 +9,7 @@ app.use(express.json());
 const port = process.env.PORT || 3000;
 
 app.use(require("./routes/newQuote")); // New Quote
-app.use(require("./routes/getAllQuote")); // Get all quote
+app.use(require("./routes/getAllQuote")); // Get All Quote
+app.use(require("./routes/deleteQuote")); // Delete Quote
 
 app.listen(port, () => console.log(`Up on http://localhost:${port}`));
