@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 mongoose.connect(
-	"mongodb://127.0.0.1:27017/quotes-api",
+	`mongodb://dimas:${process.env.PASS}@cluster0-shard-00-00.t2x83.mongodb.net:27017,cluster0-shard-00-01.t2x83.mongodb.net:27017,cluster0-shard-00-02.t2x83.mongodb.net:27017/quote-api?ssl=true&replicaSet=atlas-rs5qbf-shard-0&authSource=admin&retryWrites=true&w=majority`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
