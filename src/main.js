@@ -59,7 +59,7 @@ function launchServer() {
 		rateLimit({
 			windowMs: 24 * 60 * 60 * 1000, // 24 Hours
 			max: 5,
-			message: "Too many request from this device, please try again later"
+			message: "You have created too many quote, please try again later"
 		})
 	);
 
