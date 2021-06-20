@@ -8,7 +8,7 @@ router.post("/quote", async (req, res) => {
 
 	try {
 		await newQuote.save();
-		res.status(201).send(newQuote);
+		res.status(201).send(await Quote.find());
 	} catch (e) {
 		res.status(500).send(e);
 	}

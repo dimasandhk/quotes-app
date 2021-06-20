@@ -4,14 +4,16 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "nodemon src/main"
+		"dev": "nodemon src/main --ignore client/"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"bcrypt": "^5.0.1",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
+		"express-rate-limit": "^5.2.6",
 		"mongodb": "^3.6.9",
 		"mongoose": "^5.12.13",
 		"nanoid": "^3.1.23"
