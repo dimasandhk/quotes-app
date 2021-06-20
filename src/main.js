@@ -49,6 +49,7 @@ app.use(async (req, res, next) => {
 // 	res.status(503).send({ message: "Server Under Maintenance" });
 // });
 
+app.set("trust proxy", 1);
 app.use(
 	"/api/post/quote",
 	rateLimit({
