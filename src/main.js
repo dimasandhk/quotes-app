@@ -62,4 +62,9 @@ app.use("/api/post", require("./routes/newQuote")); // New Quote
 app.use("/api", require("./routes/getAllQuote")); // Get All Quote
 app.use("/api", require("./routes/deleteQuote")); // Delete Quote
 
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(`${__dirname}/public/`));
+	app.get(/.*/, (req, res) => res.sendFile(`${__dirname}/public/index.html`));
+}
+
 app.listen(port, () => console.log(`Up on http://localhost:${port}`));
